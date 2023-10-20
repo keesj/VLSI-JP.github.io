@@ -463,7 +463,7 @@ The following three types of signal lines are used in Logic Analyzer.
 |  Signal Name | Direction | Function |
 | ------ | ---- | ---- |
 | `la_data_in` | MGMT Core -> user_design | Data input |
-| `la_data_out` | MGMT Core <- user_diesgn | Data output |
+| `la_data_out` | MGMT Core <- user_design | Data output |
 | `la_oenb` | MGMT Core -> user_deisgn | data output enable bar |
 
 `la_data_in` is the data input, where data from the Logic Analyzer comes through. The `la_data_out` is the data output, and data to the Logic Analyzer is sent here. Of note is `la_oenb`. This is a signal that indicates whether `la_data_in` or `la_data_out` is enabled, and is input from the MGMT Core. In other words, the MGMT Core determines which line of the 128-bit Logic Analyzer is for input and which line is for output through the MMIO.
